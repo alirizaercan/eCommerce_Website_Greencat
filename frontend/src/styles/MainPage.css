@@ -1,0 +1,36 @@
+.main-page {
+  background-color: white; /* Arka plan beyaz */
+  color: black; /* Yazılar siyah */
+  padding-top: 80px; /* Header kısmından sonra içerik başlayacak */
+}
+
+.main-header {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  color: green; /* Başlık rengi yeşil */
+}
+
+footer {
+  background-color: black; /* Footer siyah */
+  color: white; /* Yazılar beyaz */
+  padding: 20px;
+  text-align: center;
+}
+
+.search-box {
+  padding: 8px;
+  border: 1px solid green;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-button {
+  padding: 8px 12px;
+  margin-left: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
