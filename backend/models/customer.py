@@ -1,9 +1,10 @@
 # backend/models/customer.py
 from sqlalchemy import Column, Integer, String, DateTime, func
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
 from datetime import datetime
-
-Base = declarative_base()
+from models.base import Base
+from utils.database import Database
 
 class Customer(Base):
     __tablename__ = 'customer'
@@ -19,6 +20,12 @@ class Customer(Base):
     wrong_login_attempts = Column(Integer, default=0)
     created_at = Column(DateTime, default=func.now(), nullable=False)
     modified_at = Column(DateTime, default=func.now(), onupdate=func.now(), nullable=False)
+    
+    shopping_sessions = relationship(
+        "ShoppingSession",
+        back_populates="customer",
+        cascade="all, delete-orphan"
+    )
 
     def __init__(self, first_name, last_name, username, email, password, phone_number):
         self.first_name = first_name

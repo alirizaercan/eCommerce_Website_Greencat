@@ -1,0 +1,6 @@
+discount_id,discount_name,discount_description,discount_percentage,active,created_at,modified_at
+1,Yılbaşı,Yılbaşına özel %20 indirim!,20.0,True,2024-12-24 01:27:14,2024-12-24 01:27:14
+2,Bahar Fırsatı,Bahar sezonuna özel %15 indirim!,15.0,True,2024-12-24 01:27:14,2024-12-24 01:27:14
+3,Kara Cuma,Kara Cuma kampanyası ile %30 indirim!,30.0,True,2024-12-24 01:27:14,2024-12-24 01:27:14
+4,Anneler Günü,Anneler Günü'ne özel %25 indirim!,25.0,True,2024-12-24 01:27:14,2024-12-24 01:27:14
+5,Sezon Sonu,Sezon sonu indirimi ile %10 indirim!,10.0,True,2024-12-24 01:27:14,2024-12-24 01:27:14

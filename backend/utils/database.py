@@ -11,13 +11,23 @@ class Database:
     def __init__(self):
         self.engine = None
         self.Session = None
+        self.connect()
 
     def connect(self):
         if self.engine is None:
-            self.engine = create_engine(os.getenv('DATABASE_URL'))  # DATABASE_URL .env dosyasından alınacak
+            database_url = os.getenv('DATABASE_URL')
+            if not database_url:
+                raise ValueError("DATABASE_URL not found in environment variables")
+            
+            self.engine = create_engine(database_url)
             Base.metadata.create_all(self.engine)
             self.Session = sessionmaker(bind=self.engine)
+
+    def get_session(self):
+        if not self.Session:
+            self.connect()
         return self.Session()
 
     def close(self, session):
-        session.close()
+        if session:
+            session.close()

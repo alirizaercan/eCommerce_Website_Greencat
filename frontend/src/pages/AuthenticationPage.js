@@ -1,4 +1,3 @@
-/* frontend/src/pages/AuthenticationPage.js */
 import React, { useState } from "react";
 import { registerCustomer, loginCustomer, getCustomerById, updateCustomer, deleteCustomer } from "../services/auth";
 
@@ -26,41 +25,41 @@ const AuthenticationPage = () => {
         username: formData.username,
         password: formData.password,
       });
-      setMessage(response.message || "Error during login");
+      setMessage(response.message || "Giriş sırasında hata oluştu");
     } else {
       const response = await registerCustomer(formData);
-      setMessage(response.message || "Error during registration");
+      setMessage(response.message || "Kayıt sırasında hata oluştu");
     }
   };
 
   return (
     <div>
-      <h1>{formType === "login" ? "Login" : "Register"}</h1>
+      <h1>{formType === "login" ? "Giriş Yap" : "Kayıt Ol"}</h1>
       <form onSubmit={handleSubmit}>
         {formType === "register" && (
           <>
             <input
               type="text"
               name="first_name"
-              placeholder="First Name"
+              placeholder="Ad"
               onChange={handleChange}
             />
             <input
               type="text"
               name="last_name"
-              placeholder="Last Name"
+              placeholder="Soyad"
               onChange={handleChange}
             />
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder="E-posta"
               onChange={handleChange}
             />
             <input
               type="text"
               name="phone_number"
-              placeholder="Phone Number"
+              placeholder="Telefon Numarası"
               onChange={handleChange}
             />
           </>
@@ -68,22 +67,22 @@ const AuthenticationPage = () => {
         <input
           type="text"
           name="username"
-          placeholder="Username"
+          placeholder="Kullanıcı Adı"
           onChange={handleChange}
         />
         <input
           type="password"
           name="password"
-          placeholder="Password"
+          placeholder="Şifre"
           onChange={handleChange}
         />
         <button type="submit">
-          {formType === "login" ? "Login" : "Register"}
+          {formType === "login" ? "Giriş Yap" : "Kayıt Ol"}
         </button>
       </form>
       <p>{message}</p>
       <button onClick={() => setFormType(formType === "login" ? "register" : "login")}>
-        Switch to {formType === "login" ? "Register" : "Login"}
+        {formType === "login" ? "Kayıt Ol" : "Giriş Yap"}
       </button>
     </div>
   );
