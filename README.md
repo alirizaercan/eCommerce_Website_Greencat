@@ -1,14 +1,18 @@
-# E-Commerce Sales and Demand Forecasting Platform
+# E-Commerce Website - Greencat
 
 ## Overview
 
-The **E-Commerce Sales and Demand Forecasting Platform** aims to develop a web application that allows users to view, analyze, and interact with sales and demand forecasts for an e-commerce platform. This project utilizes data engineering, data science techniques, and a comprehensive database management system to process, store, and analyze e-commerce data. The system allows for manual data collection and processing, providing insights into sales trends, product demand, and user behavior.
+The **E-Commerce Website - Greencat** project was developed by Ali Riza Ercan for the Database Management Systems course during the 2024-2025 Fall Semester at KTO Karatay University. This project presents an e-commerce platform with a user-friendly frontend and a detailed backend. Users can interact with various sections of the website, allowing them to purchase products from GreenCat. The platform provides features such as viewing product details, managing a shopping cart, placing orders, adding shipping addresses, and completing payments. Users can also review past and current order details and update their profile information. The website offers product browsing based on selected categories, and users can add items to their shopping carts.
 
-This project is part of the **Database Management Systems** course, focusing on advanced techniques in database management, backend development using Flask, and frontend development with ReactJS.
+The **E-Commerce Website - Greencat** aims to build a comprehensive platform for users to view, analyze, and interact with products in an e-commerce setting. This project integrates data engineering, data science techniques, and a robust database management system to process, store, and analyze e-commerce data. Users can access data-driven insights, such as sales trends, product demand, and customer behavior.
+
+This project was created for the **Database Management Systems** course, focusing on advanced database management techniques, backend development with Flask, and frontend development using ReactJS.
+
+![E-commerce Website Screenshot](ecommerce_website.png)
 
 ## Project Objective
 
-The goal of this project is to create a platform where e-commerce sales data and demand forecasts can be easily accessed and analyzed. The system will include functionalities for data processing, visualization, reporting, and machine learning-based sales forecasting. It will also incorporate user interactivity and allow for feedback collection to improve the platform over time.
+The goal of this project is to develop an accessible and interactive platform for e-commerce websites that facilitates the collection, analysis, and presentation of data. It features data processing, visualization, and ecommerce functionalities, while also offering user interactivity. Feedback collection will be integrated to continuously improve the platform.
 
 ## Technologies Used
 
@@ -16,6 +20,7 @@ The goal of this project is to create a platform where e-commerce sales data and
 - **Database Management**: PostgreSQL
 - **Web Framework**: Flask (Backend), ReactJS (Frontend)
 - **Data Analysis Libraries**: Pandas, NumPy, scikit-learn
+- **Web Scraping Libraries**: BeautifulSoup, Selenium
 - **Data Visualization**: Matplotlib, Seaborn, Plotly, Dash
 - **Frontend Technologies**: HTML, CSS, JavaScript, ReactJS
 - **Other Tools**: Bootstrap/Tailwind CSS (for UI design)
@@ -24,58 +29,50 @@ The goal of this project is to create a platform where e-commerce sales data and
 
 ### 1. Data Collection
 
-- **Data Sources**: Datasets related to e-commerce will be downloaded from open data sources like Kaggle. Example datasets include product sales, user reviews, pricing data, and product categories.
+- **Data Sources**: Datasets are scraped from Trendyol and other e-commerce platforms.
   
-- **Manual Data Collection**: Data will be manually gathered from e-commerce websites, including product details, prices, stock status, categories, and user reviews.
+- **Manual Data Collection**: Information such as product details, prices, stock status, categories, and user reviews are manually gathered from e-commerce websites.
 
 ### 2. Data Processing and Cleaning
 
-- **Data Processing with Python**: The data will be cleaned and organized using Python libraries such as Pandas and NumPy. Operations like handling missing values, detecting anomalies, and converting data types will be performed.
+- **Data Processing with Python**: The data is cleaned and organized using Python libraries such as Pandas and NumPy. Tasks include handling missing values, detecting anomalies, and converting data types.
   
-- **Data Visualization**: Visualizations like sales trends, user review distributions, and sales graphs categorized by product will be created using Matplotlib and Seaborn.
+- **Data Visualization**: Visualization tools like Matplotlib and Seaborn are used to create graphs for sales trends, user review distributions, and product-specific performance.
 
 ### 3. Database Management and Storage
 
-- **Database Utilization**: The data will be stored in a PostgreSQL database. Tables will be designed to store product information, sales data, and user reviews.
+- **Database Utilization**: Data is stored in a PostgreSQL database, with structured tables for product information, sales data, and user reviews.
   
-- **Data Modeling**: The database schema will include tables for products, sales, users, and reviews, structured to facilitate efficient querying and reporting.
+- **Data Modeling**: The database schema includes tables for products, sales, users, and reviews, enabling efficient querying and reporting.
 
-### 4. Analysis and Modeling
+### 4. Reporting and Visualization
 
-- **Demand and Sales Forecasting**: Statistical analysis and machine learning techniques will be used to predict future sales and demand using historical data. Libraries such as scikit-learn will be utilized to implement time series forecasting models.
+- **Dashboard Creation**: An interactive dashboard is built to present sales data, forecasts, and performance analytics.
   
-- **A/B Testing**: A/B tests will be performed to analyze the effects of different product categories or pricing strategies on sales.
+- **Visualization Tools**: Interactive graphs using Plotly or Dash provide users with the ability to filter and interact with the data.
 
-### 5. Reporting and Visualization
+### 5. Web Application Development
 
-- **Dashboard Creation**: An interactive dashboard will be created to display sales data, forecasts, and performance analytics.
+- **Frontend Development**: The frontend is built using ReactJS, with UI design supported by frameworks like Bootstrap or Tailwind CSS.
   
-- **Visualization Tools**: Interactive graphs using Plotly or Dash will allow users to filter and interact with data.
+- **Backend Development**: The backend is developed using Flask to handle data processing, analysis, and user requests.
 
-### 6. Web Application Development
+- **User Interaction**: Users can create accounts, log in, and access their personal data. Feedback forms are also integrated to allow for continuous platform improvement.
 
-- **Frontend Development**: The frontend will be developed using ReactJS, and the design will be enhanced with frameworks like Bootstrap or Tailwind CSS.
+### 6. Automation and OOP Structure
+
+- **OOP Principles**: The codebase is structured using Object-Oriented Programming (OOP) principles to ensure modularity, reusability, and maintainability.
   
-- **Backend Development**: The backend will be developed using Flask. The backend will handle data processing, analysis, and user requests.
-
-- **User Interaction**: Users can create accounts, log in, and access their data. Feedback forms will also be available to improve the platform.
-
-### 7. Automation and OOP Structure
-
-- **OOP Principles**: The codebase will be structured using Object-Oriented Programming (OOP) principles, ensuring modularity, reusability, and maintainability.
-  
-- **Automatic Reporting**: Automation will be implemented via cron jobs or a Python bot to update data and generate reports at regular intervals.
+- **Automatic Reporting**: Automation is achieved through cron jobs or Python bots to update data and generate reports at specified intervals.
 
 ## Features
 
-- **Sales and Demand Forecasting**: Predict future sales using historical data, with visualization tools for performance analysis.
-- **Interactive Dashboard**: A user-friendly dashboard displaying real-time data and analytics.
-- **User Feedback System**: Users can provide feedback on analysis results to help improve the system.
-- **A/B Testing**: Test different pricing or product strategies and measure their effect on sales.
+- **Responsive E-commerce Website**: Users can browse products, view details, and make purchases.
+- **Interactive Dashboard**: A user-friendly dashboard displaying real-time data and analytics. Admin panel includes visual graphs and insights.
 
 ## Getting Started
 
-To get started with the project, follow the instructions below:
+To get started with the project, follow these instructions:
 
 ### Prerequisites
 
@@ -89,7 +86,7 @@ To get started with the project, follow the instructions below:
 
 ```bash
    git clone <repository_url>
-   cd eCommerce_Sales_and_Demand_Forecasting_Platform
+   cd eCommerce_Website_Greencat
 ```
 
 2. Install Python dependencies:
@@ -100,8 +97,8 @@ To get started with the project, follow the instructions below:
 
 3. Set up the PostgreSQL database:
 
- - Create the necessary tables using the SQL schema files.
- - Populate the tables with sample or live data.
+ - Create the necessary tables using the provided SQL schema files.
+ - Populate the tables with sample or live data. You may need to update the `DATABASE_URL` in your environment or configuration file to match your database setup.
 
 4. Install frontend dependencies:
 
@@ -110,7 +107,7 @@ To get started with the project, follow the instructions below:
     npm install
 ```
 
-5. Start the backend Flask server:
+5. Start the backend Flask server in new terminal:
 
 ```bash
 cd backend
@@ -133,5 +130,4 @@ Feel free to fork the repository, submit issues, or contribute enhancements and 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ### Acknowledgments
-- The project uses datasets from open data sources like Kaggle.
 - Thanks to the contributors of Flask, ReactJS, PostgreSQL, and the Python data science libraries.
