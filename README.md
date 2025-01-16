@@ -85,7 +85,7 @@ To get started with the project, follow these instructions:
 1. Clone the repository:
 
 ```bash
-   git clone <repository_url>
+   git clone <https://github.com/alirizaercan/eCommerce_Website_Greencat.git>
    cd eCommerce_Website_Greencat
 ```
 
